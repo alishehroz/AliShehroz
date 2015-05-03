@@ -1,0 +1,44 @@
+[cloudera@quickstart ~]$ hive
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+hive> create database sp;
+OK
+Time taken: 1.636 seconds
+
+hive> show tables;
+OK
+Time taken: 0.493 seconds
+hive> use sp;
+OK
+Time taken: 0.051 seconds
+hive> show tables;
+OK
+sinfo
+Time taken: 0.057 seconds, Fetched: 1 row(s)
+hive> show tables
+    > ;
+OK
+new2
+neww
+sinfo
+Time taken: 0.154 seconds, Fetched: 3 row(s)
+hive> desc neww
+    > ;
+OK
+id                  	int                 	                    
+name                	string              	                    
+Time taken: 0.403 seconds, Fetched: 2 row(s)
+hive> select * from neww;
+OK
+1	hsfa
+2	ali
+Time taken: 1.392 seconds, Fetched: 2 row(s)
+hive> create table an (uid INT, uname STRING);
+OK
+Time taken: 0.666 seconds
+hive> create table ana (uid INT, uname STRING)
+    > ROW FORMAT DELIMITED                    
+    > FIELDS TERMINATED BY '\t'               
+    > LINES TERMINATED BY '\n';               
+OK
+Time taken: 0.091 seconds

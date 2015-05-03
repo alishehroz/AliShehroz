@@ -1,0 +1,45 @@
+<?php 
+
+if( !empty($_SESSION["uname"]))
+{
+header("Location:profile.php")
+}
+
+?>
+<html>
+<body>
+<style type="text/css">
+.wrapper {
+	text-align: center;
+}
+</style>
+<script src="val2.js">
+</script>
+
+</head>
+<body>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<link href='main.css' rel='stylesheet' type='text/css'>
+
+
+<div class="wrapper">
+  <h1>Sign In</h1>
+  <p>To sign-in provide us with some basic information using
+  the contact form below. Please use valid credentials.</p>
+  
+  <form  class="form" name="form2" method="post" action="profile.php">
+  <input type="text" name="un" placeholder="E-mail" onBlur="vale()" >
+  <div>
+    
+  </div>
+  
+  <input type="text" name="pas" placeholder="Password" onBlur="valpass()" >
+  
+  
+<input type="submit" name="reg" class="submit" value="Register" onSubmit="vali()">
+  
+</body>
+</html>
+
